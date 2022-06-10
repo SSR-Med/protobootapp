@@ -32,5 +32,14 @@ jobs:
           name: Artifact
           path: target/*.jar
         name: 'Upload artifact'
+      - name: Login to Heroku
+        env:
+          HEROKU_API_KEY: ${{secrets.NEW_SECRET}}
+        run: heroku container:login
+      - name: Heroku build and push
+        env:
+          HEROKU_API_KEY: ${{secrets.NEW_SECRET}}
+          HEROKU_APP_NAME: newappjioj
+        run: heroku plugins:install java && heroku deploy:jar target/protobootapp-0.0.1-SNAPSHOT.jar --jdk 11 -Dserver.port=$PORT --app $HEROKU_APP_NAME        
       
       
