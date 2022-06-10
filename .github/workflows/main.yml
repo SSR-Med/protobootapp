@@ -31,5 +31,6 @@ jobs:
         with:
           name: Artifact
           path: target/*.jar
+        name: 'Upload artifact'
       
       
