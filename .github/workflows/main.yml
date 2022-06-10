@@ -26,6 +26,6 @@ jobs:
           cache: 'maven'
         name: 'Checking Java'
       - name: 'Building project with maven'
-        run: mvn -B clean install --file pon.xml
+        run: mvn -B clean install --file pom.xml
       
       
