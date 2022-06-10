@@ -25,3 +25,7 @@ jobs:
           java-version: '11'
           cache: 'maven'
         name: 'Checking Java'
+      - name: 'Building project with maven'
+        run: mvn -B clean install --file pon.xml
+      
+      
