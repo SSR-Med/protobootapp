@@ -24,3 +24,4 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
           cache: 'maven'
+        name: 'Checking Java'
